@@ -1,42 +1,59 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HandleAddForm from './components/HandleAddForm';
-import UserTable from './components/UserTable';
+import ProductTable from './components/ProductTable';
+import { Router } from 'react-router';
+
+
+// to do
+// pagina de detalle
+// pagina para editar
+// pagina para agregar
+// pagina de informacion(pagina principal)
+// la pagina para listar todos los productos
+
+
 
 const App = () => {
-     
-const products = () => {
-    fetch('https://localhost:7051')
-    .then(response => {
-        return response.json();
-    })
-    .then(response => {
-        console.log(response)
-    })
+    const [product, setProduct] = useState([]);
+
+    const getAllProducts = () => {
+        fetch('/ProductAll')
+            .then(response => response.json())
+            .then(response => setProduct(response))
+            .catch(error => console.error(error))
+    }
+    useEffect(() => {
+        getAllProducts()
+    }, [])
+
+    const handleDelete = () => {
+        getAllProducts()
     }
 
-    const [ product, setProduct ] = useState(products);
-
-    const HandleAdd = product => {
-        product.id = product.length + 
-        setProduct([...product, HandleAdd])
+    const handleAdd = () => {
+        getAllProducts()
     }
 
 
     return (
-      <div className="container">
-          <h1>Inventario</h1>
-          <div className='Flex-row'>
-              <div className='Flex-large'>
-              <h2>Productos</h2>
-           <HandleAddForm HandleAdd={HandleAdd}/>
-              </div>
-              <div className='Flex-large'>
-                  <h2>ver</h2>
-                  <UserTable products={product} />
-              </div>
-          </div>
-      </div>
+        <Router>
+            <div className="container">
+                <h1>Inventario</h1>
+                <div className='Flex-row'>
+                    <div className='Flex-large'>
+                        <h2>Productos</h2>
+                        <HandleAddForm handleAdd={handleAdd} />
+                    </div>
+                    <div className='Flex-large'>
+                        <h2>Lista de productos</h2>
+                        <ProductTable products={product} onDelete={handleDelete} />
+                    </div>
+                </div>
+            </div>
+        </Router>
     );
 }
+
+
 
 export default App;

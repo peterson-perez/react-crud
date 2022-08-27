@@ -1,61 +1,76 @@
-body{
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: rgb(163, 196, 194);
-  cursor: pointer;
+  font-size: 16px;
 }
 
-div{
+div {
   padding-right: 10px;
   border: 1px;
-  
+
 }
 
-input{
+input {
   width: 100%;
 }
 
-.nuevo{
+.nuevo {
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 10px;
   nav-down: auto;
-  background-color: rgb(33, 243, 33);
-}
-
-.edit{
-    background: rgb(245, 5, 5); 
-    margin: 0;
-    padding: 3.5px;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-}
-
-.editar{
-    background: rgb(115, 168, 236);
-    margin: 0;
-    padding: 10px;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-}
-
-
-table{
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-    background: white;
-}
-
-th, td{
-  padding: 20px;
-  border: solid 1px black;
-}
-
-thead{
   background-color: #246355;
-  border-bottom: solid 5px #0F362D;
   color: white;
 }
 
-tr:nth-child(even){
-  background-color: #ddd;
+button{
+  cursor: pointer;
+}
+.table-action {
+  gap: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.edit {
+  font-size: 17px;
+  background: #62b9d9;
+  margin: 0;
+  padding: 3.5px;
+  display: lex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.delete {
+  font-size: 17px;
+  background: #d1462f;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+thead {
+  font-weight: 300;
+  background-color: #246355;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
