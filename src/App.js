@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import HandleAddForm from './components/HandleAddForm';
-import ProductTable from './components/ProductTable';
-import { Router } from 'react-router';
+
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { AddProductPage } from './pages/AddProductPage';
+import { DetailsPage } from './pages/DetailsPage';
+import { EditProductPage } from './pages/EditProductPage';
+import { HomePage } from './pages/HomePage';
+import { ListProductsPage } from './pages/ListProductsPage';
 
 
 // to do
@@ -14,43 +18,32 @@ import { Router } from 'react-router';
 
 
 const App = () => {
-    const [product, setProduct] = useState([]);
 
-    const getAllProducts = () => {
-        fetch('/ProductAll')
-            .then(response => response.json())
-            .then(response => setProduct(response))
-            .catch(error => console.error(error))
-    }
-    useEffect(() => {
-        getAllProducts()
-    }, [])
 
-    const handleDelete = () => {
-        getAllProducts()
-    }
-
-    const handleAdd = () => {
-        getAllProducts()
-    }
 
 
     return (
-        <Router>
+        <BrowserRouter>
             <div className="container">
                 <h1>Inventario</h1>
+                <div>
+                    <Link className='link' to='/'>Pagina Principal</Link>
+                    <Link className='link' to='/products'>Lista De Productos</Link>
+                    <Link className='link' to='/add-product'>Agregar Un Producto</Link>
+                </div>
                 <div className='Flex-row'>
-                    <div className='Flex-large'>
-                        <h2>Productos</h2>
-                        <HandleAddForm handleAdd={handleAdd} />
-                    </div>
-                    <div className='Flex-large'>
-                        <h2>Lista de productos</h2>
-                        <ProductTable products={product} onDelete={handleDelete} />
-                    </div>
+                    <Routes>
+                        <Route path='/' element={<HomePage />} />
+                        <Route path='/products' element={<ListProductsPage />} />
+                        <Route path='/add-product' element={<AddProductPage />} />
+                        <Route path='/details' element={<DetailsPage />} />
+                        <Route path='/edit-product' element={<EditProductPage />} />
+
+                    </Routes>
+
                 </div>
             </div>
-        </Router>
+        </BrowserRouter>
     );
 }
 

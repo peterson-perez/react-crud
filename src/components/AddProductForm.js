@@ -10,7 +10,7 @@ const defaultState = {
 }
 
 
-const HandleAddForm = ({ handleAdd }) => {
+const AddProductForm = ({ handleAdd }) => {
 
     const [message, setMessage] = useState('')
 
@@ -70,4 +70,4 @@ const HandleAddForm = ({ handleAdd }) => {
     );
 }
 
-export default HandleAddForm;
+export default AddProductForm;

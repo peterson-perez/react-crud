@@ -32,14 +32,26 @@ button{
   justify-content: flex-end;
 }
 
-.edit {
+.detail{
   font-size: 17px;
   background: #62b9d9;
   margin: 0;
-  padding: 3.5px;
-  display: lex;
+  padding: 10px;
+  display: flex;
   align-items: baseline;
   justify-content: flex-end;
+  text-decoration: none;
+
+}
+.edit {
+  font-size: 17px;
+  background: #54e2ac;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  text-decoration: none;
 }
 
 .delete {
@@ -74,3 +86,9 @@ thead {
 tr:nth-child(even) {
   background-color: #ddd;
 }
+
+.link{
+  padding: 10px;
+  font-size: 18px;
+}
+
