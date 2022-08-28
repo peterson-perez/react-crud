@@ -59,9 +59,8 @@ export const DetailsPage = () => {
             Categoria: <h3 className='product-info'> {product.category}</h3>
             Precio: <h3 className='product-info'> {product.price}</h3>
             Existencia: <h3 className='product-info'> {product.stock}</h3>
-            <form onSubmit={handleSubmit}>
-                <label className='esto'>Actualizar stock</label>
-                <input type="number" value={productStock} onChange={handleChange} />
+            <form className='update-product' onSubmit={handleSubmit}>
+                <input type="number" value={productStock} onChange={handleChange} placeholder="Actualizar stock" />
                 <button >Actualizar</button>
             </form>
             {message}
