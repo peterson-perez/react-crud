@@ -9,12 +9,17 @@ import { ListProductsPage } from './pages/ListProductsPage';
 
 
 // to do
-// pagina de detalle
-// pagina para editar
-// pagina para agregar
+// 
+// 
+// 
 // pagina de informacion(pagina principal)
-// la pagina para listar todos los productos
+// 
 
+// done 
+// pagina para editar
+// pagina de detalle
+// pagina para agregar productos
+// la pagina para listar todos los productos
 
 
 const App = () => {
