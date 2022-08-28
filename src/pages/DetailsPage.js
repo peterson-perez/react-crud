@@ -5,9 +5,9 @@ import { useSearchParams } from 'react-router-dom';
 export const DetailsPage = () => {
     const [searchParams] = useSearchParams();
     const [product, setProduct] = useState()
-    const id = searchParams.get('id')
     const [productStock, setProductStock] = useState('')
     const [message, setMessage] = useState('')
+    const id = searchParams.get('id')
 
     const handleChange = (event) => {
         const value = event.target.value
