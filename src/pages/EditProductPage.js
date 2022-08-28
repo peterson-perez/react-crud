@@ -1,7 +1,15 @@
 import React from 'react'
 
+
+
+
 export const EditProductPage = () => {
-  return (
-    <div>EditProductPage</div>
-  )
+    
+
+
+
+    return (
+    
+            <div>Hola</div>
+    )
 }

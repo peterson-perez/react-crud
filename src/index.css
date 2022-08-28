@@ -11,7 +11,9 @@ div {
 }
 
 input {
-  width: 100%;
+  width: 50%;
+  margin-top: 10px;
+  display: flex;
 }
 
 .nuevo {
@@ -21,6 +23,14 @@ input {
   nav-down: auto;
   background-color: #246355;
   color: white;
+  position: relative;
+}
+
+h3 {
+  margin-top: 0;
+}
+.product-detail{
+  padding: 20px;
 }
 
 button{
@@ -75,6 +85,10 @@ table {
 th,
 td {
   padding: 10px;
+}
+
+.algo{
+  font-size: 20px;
 }
 
 thead {
