@@ -1,7 +1,6 @@
-# Prueba de front-end Nelmix 
-Esta es una prueba para aplicar a la posicion de front-end de Nelmix. 
+# React crud
 
-Esta aplicacion es un inventario de productos, en este inventario de productos, puedes crear productos, eliminar los productos creados, editarlos, ver los detalles de ese producto, se puede buscar los productos existentes por su nombre.
+Esta aplicacion es un inventario de productos, en este inventario de productos, puedes crear productos, eliminar los productos creados, editarlos, ver los detalles de ese producto y se puede buscar los productos existentes por su nombre.
 
 Fue hecha utilizando la api dada por Nelmix [https://github.com/Nelmix-Solutions/Api-PruebaFront]
 
