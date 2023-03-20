@@ -8,20 +8,6 @@ import { HomePage } from './pages/HomePage';
 import { ListProductsPage } from './pages/ListProductsPage';
 
 
-// to do
-// 
-// 
-// 
-// pagina de informacion(pagina principal)
-// 
-
-// done 
-// pagina para editar
-// pagina de detalle
-// pagina para agregar productos
-// la pagina para listar todos los productos
-
-
 const App = () => {
 
 
