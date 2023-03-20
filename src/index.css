@@ -1,7 +1,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: rgb(163, 196, 194);
   font-size: 16px;
+  margin: 20px;
 }
 
 div {
@@ -14,73 +14,58 @@ input {
   width: 50%;
   margin-top: 10px;
   display: flex;
-  margin: 0px;
+  margin: 5px;
   padding: 8px;
 }
 
-.nuevo {
-  margin-top: 10px;
-  font-size: 18px;
-  padding: 10px;
-  nav-down: auto;
-  background-color: #246355;
-  color: white;
-  position: relative;
-}
 
 h3 {
   margin-top: 0;
 }
+
+button{
+  
+  cursor: pointer;
+}
+
+/* header */
+.link{
+  padding: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.link:hover{
+ background-color: black;
+ color: white;
+}
+
+/* DetailsPage */
+
 .product-detail{
   padding: 20px;
 }
 
-button{
-  cursor: pointer;
-}
-.table-action {
-  gap: 10px;
-  display: flex;
-  justify-content: flex-end;
-}
+/* Edit */
 
-.detail{
-  font-size: 17px;
-  background: #62b9d9;
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  text-decoration: none;
-
-}
-.edit {
-  font-size: 17px;
-  background: #54e2ac;
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  text-decoration: none;
-}
-
-.delete {
-  font-size: 17px;
-  background: #d1462f;
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-}
-
-.search{
+.input-search{
   display: flex;
   margin: 0px;
   padding-bottom: 10px;
   gap: 10px;
+}
+
+.serch{
+  border-radius: 5px;
+}
+
+.search:hover{
+  color: white;
+  background-color: black;
 }
 
 .update-product{
@@ -88,6 +73,7 @@ button{
   gap: 10px;
 }
 
+/* ProductTable */
 
 table {
   width: 100%;
@@ -101,13 +87,9 @@ td {
   padding: 10px;
 }
 
-.algo{
-  font-size: 20px;
-}
-
 thead {
   font-weight: 300;
-  background-color: #246355;
+  background-color: black;
   color: white;
 }
 
@@ -115,8 +97,79 @@ tr:nth-child(even) {
   background-color: #ddd;
 }
 
-.link{
-  padding: 10px;
-  font-size: 18px;
+.table-action {
+  gap: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.delete {
+  font-size: 17px;
+  padding: 5px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  border: 1px solid;
+  border-radius: 5px;
+  color: black;
+}
+
+.detail{
+  font-size: 17px;
+  padding: 5px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 5px;
+  color: black;
+}
+
+.edit {
+  font-size: 17px;
+  padding: 5px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 5px;
+  color: black;
+}
+
+.detail:hover{
+  color: white;
+  background-color: black;
+}
+
+.edit:hover{
+  color: white;
+  background-color: black;
+}
+
+.delete:hover{
+  color: white;
+  background-color: black;
+}
+
+/* EditProductForm */
+
+.edit-form{
+   margin: 20px;
+}
+
+.nuevo {
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 5px;
+  nav-down: auto;
+  color: black;
+  position: relative;
+  border-radius: 5px;
+}
+
+.nuevo:hover{
+ background-color: black;
+ color: white;
+}

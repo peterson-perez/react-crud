@@ -74,7 +74,7 @@ export const EditProductPage = () => {
     return (
 
         <>
-            <form onSubmit={handleSubmit} >
+            <form className='edit-form' onSubmit={handleSubmit} >
                 <label >Nombre</label>
                 <input type="text" name="Name" value={product.Name} onChange={handleChange} />
                 <label >Descripcion</label>

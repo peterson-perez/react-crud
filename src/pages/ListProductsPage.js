@@ -59,9 +59,9 @@ export const ListProductsPage = () => {
 
         <div className='Flex-large'>
             <h2>Lista de productos</h2>
-            <form className='search' onSubmit={handleSubmit}>
+            <form className='input-search' onSubmit={handleSubmit}>
                 <input type="text" value={name} onChange={handleChange} placeholder='Buscar Producto' />
-                <button>Buscar</button>
+                <button className='search'>Buscar</button>
             </form>
             {message}
             <ProductTable products={products} onDelete={handleDelete} />
